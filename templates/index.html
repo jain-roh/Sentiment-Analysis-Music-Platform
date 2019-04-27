@@ -1,290 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Music Mood</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-  }
-  h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-  h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }
-  .jumbotron {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-    padding: 60px 50px;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
-  }
-  .logo-small {
-    color: #f4511e;
-    font-size: 50px;
-  }
-  .logo {
-    color: #f4511e;
-    font-size: 200px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #f4511e;
-  }
-  .carousel-indicators li {
-    border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-    background-color: #f4511e;
-  }
-  .item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-  }
-  .item span {
-    font-style: normal;
-  }
-  .panel {
-    border: 1px solid #f4511e;
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
-    background-color: #fff !important;
-    color: #f4511e;
-  }
-  .panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-    background-color: white !important;
-  }
-  .panel-footer h3 {
-    font-size: 32px;
-  }
-  .panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-  }
-  .panel-footer .btn {
-    margin: 15px 0;
-    background-color: #f4511e;
-    color: #fff;
-  }
-  .navbar {
-    margin-bottom: 0;
-    background-color: #f4511e;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
-    }
-  }
-  </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Music Platform Recommendation</title>
+		<meta name="description" content="Tab Styles Inspiration: A small collection of styles for tabs" />
+		<meta name="keywords" content="tabs, inspiration, web design, css, modern, effects, svg" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/tabstyles.css" />
+  		<script src="static/js/modernizr.custom.js"></script>
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		  
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+			</defs>
+		</svg>
+		<div class="container">
+			<!-- Top Navigation -->
+			<section>
+				<div class="tabs tabs-style-tzoid">
+					<nav>
+						<ul>
+							<li><a href="#section-tzoid-1" class="icon icon-home"><span>Home</span></a></li>
+							<li><a href="#section-tzoid-2" class="icon icon-box">Sentiment Report</a></li>
+							<li><a href="#section-tzoid-3" class="icon icon-box"><span>Recommendation</span></a></li>
+							<li><a href="#section-tzoid-4" class="icon icon-display"><span>Analytics</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-tzoid-1"> 
+								<div class="row">
+										<img src="" id="commentType"/>
+								</div>
+							<textarea type="text" name="text" cols="50" rows="5" class="form-control" size="50" id="text" placeholder="Enter your Comment/ Reviews here" required></textarea>
+							<br/><br/> <button type="button" id="get-senti" class="btn btn-danger">Submit</button></section>
+							<section id="section-tzoid-2"> <div class="row">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#myPage">K3G Music Song Mood Prediction</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="jumbotron text-center">
-
-  <h1 id="moodForm"></h1>
-  <p>We specialize Data Sciene</p><br/>
-  <img id="mood" src=""/>
-<br/><br/>
-
-      <textarea type="text" name="song" cols="50" rows="10" class="form-control" size="50" id="song" placeholder="Lyrics" required></textarea>
-       <br/> <button type="button" id="song-lop" class="btn btn-danger">Submit</button>
-</div>
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>This webpage is collborative effort by Rohit Jain, Akhilesh Tawade, Raj Phadke and Rishika Bhunkara. This is a Mood Predictor, where your song is passed to an API and then it is translated from Hindi lyrics to its respective english Subtitle and prediction is made whether it is a Sad Song or a Happy Song. </p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Northeastern University, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> groupemail@husky.neu.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Theme Made By Team 9</p>
-</footer>
-
-<script>
+									<div class="col-sm-3 form-group">
+									  <input class="form-control" id="email" name="email" placeholder="Gmail ID" type="email" required>
+									</div>
+									<div class="col-sm-3 form-group">
+									  <input class="form-control" id="pwd" name="pwd" placeholder="Gmail Password" type="password" required>
+									</div>
+								  <div class="col-sm-2 form-group">
+								
+								  <input class="form-control" id="tag" name="tag" placeholder="#Tag without #" type="text" required></textarea><br>
+								  </div>
+								  <div class="col-sm-2 form-group">
+									  <input class="form-control" id="sentlist" name="sentlist" placeholder="Receiver email ID's seperated by ," type="text" required>
+									</div>
+									<div class="col-sm-2 form-group">
+											<input class="form-control" id="pageCount" name="pageCount" placeholder="Page Count" type="number" min="1" max="10" required>
+									</div>
+								  </div>
+								
+								  <div class="row">
+									  <div class="col-sm-6 form-group">
+										<button class="btn btn-default pull-right" id="sentiment-btn" type="submit">Submit</button>
+									  </div>
+									</div>
+								</section>
+								<section id="section-tzoid-3"> 
+									<div class="row">
+											<img src="" id="musicPlatform"/>
 
 
-$(document).ready(function() {
-  $(document).on("click","#song-lop",function(){
-    var song=$("#song").val();
-    if (song.trim()) {
+									</div>
+									<div class="row">
+											<div class="col-sm-3 form-group">
+												<label for="cost">Cost:</label>
+													<select id="cost" class="form-control">
+														<option value="NoPref">No Preference</option>
+														<option value="Low">Low</option>
+														<option value="High">High</option>
+
+													</select>
+											</div>
+											<div class="col-sm-3 form-group">
+													<label for="recommendation">Recommendation:</label>
+														<select id="recommendation" class="form-control">
+															<option value="NoPref">No Preference</option>
+															<option value="Low">Low</option>
+															<option value="High">High</option>
+	
+														</select>
+												</div>
+												<div class="col-sm-3 form-group">
+														<label for="stability">Stability:</label>
+															<select id="stability" class="form-control">
+																<option value="NoPref">No Preference</option>
+																<option value="Low">Low</option>
+																<option value="High">High</option>
+		
+															</select>
+													</div>
+											<div class="col-sm-3 form-group">
+													<label for="ads">Ads:</label>
+														<select id="ads" class="form-control">
+															<option value="NoPref">No Preference</option>
+															<option value="Low">Low</option>
+															<option value="High">High</option>
+
+														</select>
+												</div>
+
+
+								</div>
+								<div class="row">
+										<div class="col-sm-6 form-group">
+										  <button class="btn btn-default pull-right" id="recommend-btn" type="submit">Submit</button>
+										</div>
+									  </div>
+								
+							</section>
+							<section id="section-tzoid-4"> 
+									<script type='text/javascript' src='https://us-east-1.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1280px; height: 750px;'><object class='tableauViz' width='1280' height='750' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-east-1.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;megatron' /><param name='name' value='ComparitiveAnalysisVisualization&#47;Dashboard2' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+									<img src="static/img/Dashboard 1.png" style="width:80%;"/>
+									<img src="static/img/Dashboard 2.png"  style="width:80%;"/>
+
+								</section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+				<p>Changed by Team 9 for Data Science Final Project</p>
+				<p>Technique from <a href="http://vintageproductions.eu/grid/interactivity/">Slanted tabs with CSS 3D transforms</a> by Lea Verou</p>
+			</section>
+				</div><!-- /container -->
+		<script src="static/js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+			<script>
+					$(document).ready(function() {
+					  $(document).on("click","#get-senti",function(){
+						var text=$("#text").val();
+						if (text.trim()) {
+						// is empty or whitespace
+					   var response="";
+					   var qurl="/predict-sentiment";
+					   $.ajax({
+								type: "POST",
+								cache: false,
+								data:{'text':text},
+								url: qurl,
+								dataType: "json",
+								success: function(response) { 
+								var mood=response.Prediction;  
+								if (mood=='Neutral')
+								{
+									$('#commentType').attr('src', 'static/img/neutral.png');
+								}
+								else if(mood=='Negative')
+								{
+									$('#commentType').attr('src', 'static/img/Negative.png');
+								}
+								else
+								{
+									$('#commentType').attr('src', 'static/img/BePositive.jpeg');
+								}
+								},
+								error: function(jqXHR) {
+									alert("error: " + jqXHR.status);
+								}
+							})
+					}
+					else{
+					alert("Text is empty")
+					}
+					});
+					
+					$(document).on("click","#sentiment-btn",function(){
+    var email=$("#email").val();
+
+    var pwd=$("#pwd").val();
+
+    var sentlist=$("#sentlist").val();
+
+    var tag=$("#tag").val();
+	var pageCount=$("#pageCount").val();				
+    if (email.trim() && pwd.trim() && sentlist.trim() && tag.trim() && pageCount) {
     // is empty or whitespace
    var response="";
-   var qurl="/predict-sentiment";
+   var qurl="/report-sent";
    $.ajax({
             type: "POST",
             cache: false,
-            data:{'text':song},
+            data:{'tag':tag,'email':email,'pwd':pwd,'sentlist':sentlist,'pageCount':pageCount},
             url: qurl,
             dataType: "json",
             success: function(response) { 
-            var mood=response.Prediction;  
-            if (mood=='Neutral')
-            {
-             alert("Neutral");
-            }
-            else if(mood=='Negative')
-            {
-             alert("Negative");
-            }
-            else
-            {
-             alert("Positive");
-            }
+            var mood=response.Result;  
+			alert(mood);
             },
             error: function(jqXHR) {
                 alert("error: " + jqXHR.status);
@@ -292,10 +215,62 @@ $(document).ready(function() {
         })
 }
 else{
-alert("Song is empty")
+alert("Some fieldis/are empty");
 }
-});});
-</script>
+});
 
-</body>
+
+$(document).on("click","#recommend-btn",function(){
+    var cost=$("#cost").val();
+
+    var stability=$("#stability").val();
+
+    var recommendation=$("#recommendation").val();
+
+    var ads=$("#ads").val();
+
+    if (cost.trim() && stability.trim() && recommendation.trim() && ads.trim()) {
+    // is empty or whitespace
+   var response="";
+   var qurl="/recommend-sent";
+   $.ajax({
+            type: "POST",
+            cache: false,
+            data:{'ads':ads,'cost':cost,'stability':stability,'recommendation':recommendation},
+            url: qurl,
+            dataType: "json",
+            success: function(response) { 
+            var mood=response.Result;  
+			if(mood=="Spotify")
+			{
+			$('#musicPlatform').attr('src', 'static/img/Spotify.jpg');
+			}
+			else if(mood=="Pandora")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Pandora.jpg');
+
+			}
+			else if(mood=="Apple Music")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Apple-Music.jpg');
+
+			}
+			else if(mood=="Amazon Music")
+			{
+				$('#musicPlatform').attr('src', 'static/img/Amazon-Music.jpg');
+
+			}            },
+            error: function(jqXHR) {
+                alert("error: " + jqXHR.status+"\n Possible Gmail Security Authentication Error. Please check you email Id and allow the access");
+            }
+        })
+}
+else{
+alert("Some fieldis/are empty");
+}
+});
+
+					});
+					</script>
+	</body>
 </html>
